@@ -289,7 +289,8 @@ def generate_vcf_header(args, example_breakpoint):
 		'##INFO=<ID=END_CLUSTER,Number=.,Type=String,Description="SAVANA internal end cluster id supporting variant">',
 		'##INFO=<ID=TUMOUR_DP,Number=.,Type=Float,Description="Local depth in tumour at the breakpoint(s) of an SV">',
 		'##INFO=<ID=NORMAL_DP,Number=.,Type=Float,Description="Local depth in normal at the breakpoint(s) of an SV">',
-		'##INFO=<ID=BP_NOTATION,Number=1,Type=String,Description="+- notation format of variant (same for paired breakpoints)">'
+		'##INFO=<ID=BP_NOTATION,Number=1,Type=String,Description="+- notation format of variant (same for paired breakpoints)">',
+		'##INFO=<ID=SVINSSEQ,Number=1,Type=String,Description="Longest insert sequence detected for an insertion, including an insert from a normal read if there is support for one at the location">'
 	])
 	# add the stat info fields
 	breakpoint_stats_origin = example_breakpoint.originating_cluster.get_stats().keys()

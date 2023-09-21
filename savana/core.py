@@ -221,6 +221,7 @@ class ConsensusBreakpoint():
 			info[0] = 'SVTYPE=INS;' + info[0]
 			info[0]+=f'TUMOUR_DP={self.local_depths["tumour"][0]};'
 			info[0]+=f'NORMAL_DP={self.local_depths["normal"][0]};'
+			info[0]+=f'SVINSSEQ={self.inserted_sequence};'
 		else:
 			info.append(info[0]) # duplicate info
 			# add edge-specific info

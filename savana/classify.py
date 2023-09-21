@@ -27,7 +27,9 @@ def get_info_fields(vcf):
 	fields = []
 	for rec in vcf.header_iter():
 		if rec['HeaderType'] == "INFO":
-			fields.append(rec.info()['ID'])
+			field = rec.info()['ID']
+			if field != 'SVINSSEQ':
+				fields.append(field)
 
 	return fields
 
